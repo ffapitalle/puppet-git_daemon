@@ -17,4 +17,4 @@ GIT_DAEMON_DIRECTORY=/var/lib/git
 GIT_DAEMON_OPTIONS="--init-timeout=<%= @init_timeout %> --timeout=<%= @timeout %><% if @export_all %> --export-all<% end %><% if @enable_upload_archive %> --enable=upload-archive<% end %><% if @enable_receive_pack %> --enable=receive-pack<% end %>"
 <% if @interpolated_path != '' -%>
 GIT_DAEMON_OPTIONS="$GIT_DAEMON_OPTIONS --interpolated_path=<%= @interpolated_path %>"
-<% end %>
+<% end -%>
