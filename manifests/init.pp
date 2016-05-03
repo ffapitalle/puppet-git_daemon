@@ -50,7 +50,7 @@ class git_daemon (
   $enable_receive_pack   = $git_daemon::params::enable_receive_pack,
   $interpolated_path     = $git_daemon::params::interpolated_path
 
-) {
+) inherits git_daemon::params {
 
   anchor { 'git_daemon::begin': } ->
   class { '::git_daemon::install': } ->
