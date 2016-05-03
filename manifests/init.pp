@@ -36,13 +36,19 @@
 # Copyright 2016 Your name here, unless otherwise noted.
 #
 class git_daemon (
-  $package_ensure = $git_daemon::params::package_ensure,
-  $package_name   = $git_daemon::params::package_name,
-  $service_ensure = $git_daemon::params::service_ensure,
-  $service_enable = $git_daemon::params::service_enable,
-  $service_name   = $git_daemon::params::service_name,
-  $user           = $git_daemon::params::user,
-  $base_path      = $git_daemon::params::base_path
+  $package_ensure        = $git_daemon::params::package_ensure,
+  $package_name          = $git_daemon::params::package_name,
+  $service_ensure        = $git_daemon::params::service_ensure,
+  $service_enable        = $git_daemon::params::service_enable,
+  $service_name          = $git_daemon::params::service_name,
+  $user                  = $git_daemon::params::user,
+  $base_path             = $git_daemon::params::base_path,
+  $init_timeout          = $git_daemon::params::init_timeout,
+  $timeout               = $git_daemon::params::timeout,
+  $export_all            = $git_daemon::params::export_all,
+  $enable_upload_archive = $git_daemon::params::enable_upload_archive,
+  $enable_receive_pack   = $git_daemon::params::enable_receive_pack,
+  $interpolated_path     = $git_daemon::params::interpolated_path
 
 ) {
 
