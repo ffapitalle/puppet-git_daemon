@@ -1,0 +1,20 @@
+# Defaults for git-daemon initscript
+# sourced by /etc/init.d/git-daemon
+# installed at /etc/default/git-daemon by the maintainer scripts
+# This file managed by Puppet
+# Template Path: <%= @module_name %>/templates/git-daemon.default.erb
+
+#
+# This is a POSIX shell fragment
+#
+
+GIT_DAEMON_ENABLE=<%= @service_enable %>
+GIT_DAEMON_USER=<%= @user %>
+GIT_DAEMON_BASE_PATH=<%= @base_path %>
+GIT_DAEMON_DIRECTORY=/var/lib/git
+
+# Additional options that are passed to the Daemon.
+GIT_DAEMON_OPTIONS="--init-timeout=<%= @init_timeout %> --timeout=<%= @timeout %><% if @export_all %> --export-all<% end %><% if @enable_upload_archive %> --enable=upload-archive<% end %><% if @enable_receive_pack %> --enable=receive-pack<% end %>"
+<% if @interpolated_path != '' -%>
+GIT_DAEMON_OPTIONS="$GIT_DAEMON_OPTIONS --interpolated_path=<%= @interpolated_path %>"
+<% end %>
