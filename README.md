@@ -38,24 +38,24 @@ class { 'git_daemon':
 
 ## Reference
 
-###Parameters
+### Parameters
 
-####Git
-#####`user`
+#### Git
+##### `user`
 Specify the user that will be used to run the daemon. Default: 'gitdaemon'
-#####`base_path`
+##### `base_path`
 Specify the location of repositories. Default: '/var/lib'
-#####`init_timeout`
+##### `init_timeout`
 Specify the timeout in seconds between the moment the connection is established and the client request is received. Default: 30
-#####`timeout`
+##### `timeout`
 Specify the timeout in seconds for specific client sub-requests. Default: 3600
-#####`export_all`
+##### `export_all`
 Allow pulling from all directories that look like Git repositories. Default: false
-#####`enable_upload_archive`
+##### `enable_upload_archive`
 This serves git archive --remote. Default: false
-#####`enable_receive_pack`
+##### `enable_receive_pack`
 Allow anonymous push. Default: false
-#####`interpolated_path`
+##### `interpolated_path`
 Template that can be used to dynamically construct alternate paths (a.k.a. virtual hosting). Default: ''
 
 ## Limitations
